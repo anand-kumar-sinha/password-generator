@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.main-Cont {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: skyblue;
+  align-items: center;
+}
+
+.wrapper {
+  min-width: 500px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper > h1 {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.password-cont {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 70%;
+  align-items: center;
+  border-radius: 25px;
+  border: 3px solid rgb(75, 75, 252);
+}
+
+.password-cont > p{
+  padding-right: 10px;
+}
+
+#password {
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 25px;
+  width: 80%;
+  border: none;
+  background: skyblue;
+  outline: none;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#password::placeholder{
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+}
+
+.checkbox-wrapper {
+  margin-top: 15px;
+  padding: 30px;
+  border-radius: 25px;
+  width: 60%;
+  display: flex;
+  background: rgba(255, 255, 255, 0.3);
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border: 3px solid rgb(75, 75, 252);
+}
+
+.password-length {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#range {
+  appearance: none;
+  background: skyblue;
+  border-radius: 25px;
+  width: 98%;
+  height: 15px;
+  margin-top: 10px;
+}
+
+#range:focus {
+  border: 3px solid cyan;
+}
+
+#range::-webkit-slider-thumb{
+  /* position: relative; */
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 12px 5px cyan;
+  background: rgb(0, 217, 255);
+}
+
+#range::-webkit-slider-thumb:hover{
+  background: cyan;
+  box-shadow: 0px 0px 12px 5px rgb(0, 217, 255);
+}
+
+.checkbox-cont {
+  width: 100%;
+}
+
+.checkbox {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 3px solid rgb(75, 75, 252);
+  border-radius: 5px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.checkbox:checked{
+  background: rgb(75, 75, 252);
+}
+
+.checkbox:checked::before{
+  content: '✓';
+  color: aqua;
+  font-weight: 900;
+  position: absolute;
+  transform: translateY(-20%) ;
+}
+
+.strength {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-round {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+button {
+  font-size: 18px;
+  border: none;
+  border: 3px solid rgb(75, 75, 252);
+  font-weight: 600;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 25px;
+}
+
+.active{
+  position: absolute;
+  right: 0;
+  top: -80%;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  background: rgba(255, 255, 255, 0.3);
+  padding:  5px 8px;
+  border-radius: 25px;
+}
+
+@keyframes popup {
+  from{
+    scale: 0;
+  }
+
+  to{
+    scale: 1;
+  }
+}
